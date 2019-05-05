@@ -1,0 +1,7 @@
+/DemoWebSite/node_modules/
+/DemoWebSite/.vscode/
+/DemoWebSite/bin/
+/DemoWebSite/obj/
+/DemoServer/bin/
+/.vs
+/packages/

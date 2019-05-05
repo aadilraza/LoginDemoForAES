@@ -1,0 +1,57 @@
+<div class="container">
+    
+    <h1 style="text-align:center">AES Algorithum Implementation</h1>
+    <div class="row">
+
+
+        <div class="col-md-5" style="background:lightblue;border-radius:15px;">
+            <h3>Send Message To New Page</h3>
+            <form (ngSubmit)="FormSend()">
+                <div class="form-group">
+                    <label for="sendKey">Key:</label>
+                    <div class="input-group">
+                        <input type="password" class="form-control" id="pwd1" placeholder="Enter Key" name="pwd1" [(ngModel)]="SendKey">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" id="reveal1" (click)="reveal1()" type="button"><i class="glyphicon glyphicon-eye-open"></i></button>
+                        </span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="sendPlaintext">Message:</label>
+                    <textarea class="form-control" id="sendPlaintext" placeholder="Enter Plaintext" rows="5" name="sendPlaintext" [(ngModel)]="SendPlainText"></textarea>
+                </div>
+                <button type="submit" class="btn btn-default" style="margin-bottom:10px;">Send</button>
+            </form>
+        </div>
+
+        <div class="col-md-1">
+            <!-- space-->
+        </div>
+
+
+
+        <div class="col-md-5" style="background:lightgray;border-radius:15px;">
+            <h3>Encrypt Plaintext</h3>
+            <form (ngSubmit)="Formsubmit()">
+                <div class="form-group">
+                    <label for="pwd2">Key</label>
+                    <div class="input-group">
+                        <input type="password" class="form-control" id="pwd2" placeholder="Enter Key To Encrypt" name="EnKey" [(ngModel)] ="EncryptKey">
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-default" id="reveal2" (click)="reveal2()"><i class="glyphicon glyphicon-eye-open"></i></button>
+                        </span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="plainText">Plaintext</label>
+                    <textarea class="form-control" placeholder="Enter Plaintext" rows="5" id="plainText" name="plainText" [(ngModel)]="EncryptPlainText"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="textbox3">CipherText</label>
+                    <textarea class="form-control" rows="5" id="textbox3" name="textbox3" [(ngModel)]="CipherText"></textarea>
+                </div>
+                <button type="submit" class="btn btn-default" style="margin-bottom:10px;">Encrypt</button>
+            </form>
+        </div>
+    </div>
+</div>
